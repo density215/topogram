@@ -31,154 +31,121 @@ var percent = (function () {
 
     fields = [
         {name: "(no scale)", id: "none"},
-        // {name: "Census Population", id: "censuspop", key: "CENSUS%dPOP", years: [2010]},
-        // {name: "Estimate Base", id: "censuspop", key: "ESTIMATESBASE%d", years: [2010]},
         {
-            name: "AUTHORISATIONS",
+            name: "Authorisations",
             id: "AUTHORISATIONS",
             years: [2016],
             key: "AUTHORISATIONS%d",
-            format: "+,"
+            format: ","
         },
         {name: "Announcements", id: "announcements", years: [2016], key: "ANNOUNCEMENTS%d", format: ","},
         {
-            name: "ACCURACYANNOUNCEMENTS",
+            name: "Accuracy announcements",
             id: "ACCURACYANNOUNCEMENTS",
             years: [2016],
             key: "ACCURACYANNOUNCEMENTS%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "ACCURACYANNOUNCEMENTSFILTERED",
+            name: "Accuracy announcements filtered",
             id: "ACCURACYANNOUNCEMENTSFILTERED",
             years: [2016],
             key: "ACCURACYANNOUNCEMENTSFILTERED%d",
-            format: "+,"
+            format: ","
         },
-        {name: "FRACTIONVALID", id: "FRACTIONVALID", years: [2016], key: "FRACTIONVALID%d", format: "+,"},
+        {name: "Fraction valid", id: "FRACTIONVALID", years: [2016], key: "FRACTIONVALID%d", format: ","},
         {
-            name: "FRACTIONINVALIDLENGTH",
+            name: "Fraction invalid length",
             id: "FRACTIONINVALIDLENGTH",
             years: [2016],
             key: "FRACTIONINVALIDLENGTH%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONINVALIDLENGTHFILTERED",
+            name: "Fraction invalid length filtered",
             id: "FRACTIONINVALIDLENGTHFILTERED",
             years: [2016],
             key: "FRACTIONINVALIDLENGTHFILTERED%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONINVALIDASN",
+            name: "Fraction invalid ASN",
             id: "FRACTIONINVALIDASN",
             years: [2016],
             key: "FRACTIONINVALIDASN%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONINVALIDASNFILTERED",
+            name: "Fraction invalidasn filtered",
             id: "FRACTIONINVALIDASNFILTERED",
             years: [2016],
             key: "FRACTIONINVALIDASNFILTERED%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONUNKNOWN",
+            name: "Fraction unknown",
             id: "FRACTIONUNKNOWN",
             years: [2016],
             key: "FRACTIONUNKNOWN%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "SPACEANNOUNCED",
+            name: "Space announced",
             id: "SPACEANNOUNCED",
             years: [2016],
             key: "SPACEANNOUNCED%d",
-            format: "+,"
+            format: ","
         },
-        {name: "ACCURACYSPACE", id: "ACCURACYSPACE", years: [2016], key: "ACCURACYSPACE%d", format: "+,"},
+        {name: "Accuracy space", id: "ACCURACYSPACE", years: [2016], key: "ACCURACYSPACE%d", format: ","},
         {
-            name: "ACCURACYSPACEFILTERED",
+            name: "Accuracy space filtered",
             id: "ACCURACYSPACEFILTERED",
             years: [2016],
             key: "ACCURACYSPACEFILTERED%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONSPACEVALID",
+            name: "Fraction space valid",
             id: "FRACTIONSPACEVALID",
             years: [2016],
             key: "FRACTIONSPACEVALID%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONSPACEINVALIDLENGTH",
+            name: "Fraction space invalid length",
             id: "FRACTIONSPACEINVALIDLENGTH",
             years: [2016],
             key: "FRACTIONSPACEINVALIDLENGTH%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONSPACEINVALIDLENGTHFILTERED",
+            name: "Fraction space invalid length filtered",
             id: "FRACTIONSPACEINVALIDLENGTHFILTERED",
             years: [2016],
             key: "FRACTIONSPACEINVALIDLENGTHFILTERED%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONSPACEINVALIDASN",
+            name: "Fractionspace invalid ASN",
             id: "FRACTIONSPACEINVALIDASN",
             years: [2016],
             key: "FRACTIONSPACEINVALIDASN%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONSPACEINVALIDASNFILTERED",
+            name: "Fraction space invalid ASN filtered",
             id: "FRACTIONSPACEINVALIDASNFILTERED",
             years: [2016],
             key: "FRACTIONSPACEINVALIDASNFILTERED%d",
-            format: "+,"
+            format: ","
         },
         {
-            name: "FRACTIONSPACEUNKNOWN",
+            name: "Fraction space unknown",
             id: "FRACTIONSPACEUNKNOWN",
             years: [2016],
             key: "FRACTIONSPACEUNKNOWN%d",
-            format: "+,"
+            format: ","
         }
-
-
-
-        /*
-         {name: "Population Estimate", id: "popest", key: "POPESTIMATE%d"},
-         {name: "Population Change", id: "popchange", key: "NPOPCHG_%d", format: "+,"},
-         {name: "Births", id: "births", key: "BIRTHS%d"},
-         {name: "Deaths", id: "deaths", key: "DEATHS%d"},
-         {name: "Natural Increase", id: "natinc", key: "NATURALINC%d", format: "+,"},
-         {name: "Int'l Migration", id: "intlmig", key: "INTERNATIONALMIG%d", format: "+,"},
-         {name: "Domestic Migration", id: "domesticmig", key: "DOMESTICMIG%d", format: "+,"},
-         {name: "Net Migration", id: "netmig", key: "NETMIG%d", format: "+,"},
-         {name: "Residual", id: "residual", key: "RESIDUAL%d", format: "+,"},
-         {name: "Birth Rate", id: "birthrate", key: "RBIRTH%d", years: [2011], format: percent},
-         {name: "Death Rate", id: "deathrate", key: "RDEATH%d", years: [2011], format: percent},
-         {name: "Natural Increase Rate", id: "natincrate", key: "RNATURALINC%d", years: [2011], format: percent},
-         {
-         name: "Int'l Migration Rate",
-         id: "intlmigrate",
-         key: "RINTERNATIONALMIG%d",
-         years: [2011],
-         format: percent
-         },
-         {
-         name: "Net Domestic Migration Rate",
-         id: "domesticmigrate",
-         key: "RDOMESTICMIG%d",
-         years: [2011],
-         format: percent
-         },
-         {name: "Net Migration Rate", id: "netmigrate", key: "RNETMIG%d", years: [2011], format: percent} */
     ],
     years = [2016],
     fieldsById = nest()
@@ -256,7 +223,7 @@ function updateZoom() {
      "scale(" + [scale, scale] + ")"); */
 }
 
-var proj = geoProjection.geoEckert3(),
+var proj = geoProjection.geoAitoff(),
     topology,
     geometries,
     rawData,
@@ -274,10 +241,7 @@ window.onhashchange = function () {
     parseHash();
 };
 
-var segmentized = location.search === "?segmentized",
-    url = ["data",
-        segmentized ? "us-states-segmentized.topojson" : "110m_countries_dateline_corr.topo.json"
-    ].join("/");
+var url = "data/110m_countries_dateline_corr.topo.json";
 json(url, function (topo) {
     topology = topo;
     geometries = topology.objects['110m_countries'].geometries;
